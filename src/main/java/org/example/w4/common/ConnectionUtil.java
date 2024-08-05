@@ -1,4 +1,4 @@
-package org.example.w2.common;
+package org.example.w4.common;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
