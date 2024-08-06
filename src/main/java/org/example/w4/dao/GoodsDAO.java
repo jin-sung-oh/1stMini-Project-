@@ -48,15 +48,13 @@ public enum GoodsDAO {
                     .mquantity(rs.getInt("mquantity"))
                     .img1(rs.getString("img1"))
                     .img2(rs.getString("img2"))
+                    .sell(rs.getBoolean("sell"))
                     .build();
 
             list.add(vo);
         }
         ;       return list;
     }
-
-
-
 
 }
 
