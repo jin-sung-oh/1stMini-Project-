@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -30,12 +30,11 @@
 <body>
 <h1>cartpage</h1>
 <div>
-    <c:forEach var="item" items="${wantedGoods}">
-        <div class="cart-item">
-            <img src="/img/${goods.image1}" alt="${goods.mname}">
+    <c:forEach var="goods" items="${wantedGoods}">
+        <div class="cart-goods">
+            <img src="/img/${goods.img1}" alt="${goods.mname}">
             <div class="cart-item-details">
                 <span class="cart-item-detail">상품명: ${goods.mname}</span>
-                <span class="cart-item-detail">수량: ${goods.qty}</span>
                 <span class="cart-item-detail">가격: ${goods.mprice} 원</span>
             </div>
         </div>
