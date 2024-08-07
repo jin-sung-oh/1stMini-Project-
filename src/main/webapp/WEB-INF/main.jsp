@@ -11,11 +11,8 @@
 </head>
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
 
-
 <style>
-    .ani img{
-        width: 300px;
-    }
+
 </style>
 <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
@@ -25,11 +22,13 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
     <div class="carousel-inner">
-<c:forEach items="${aniList}" var="ani">
-        <div class="carousel-item active">
-            <img src="/img/a${ani.ano}.jpg" class="d-block w-100" alt="...">
-        </div>
-</c:forEach>
+        <c:forEach items="${aniList}" var="ani">
+            <div class="carousel-item ${ani.ano == 1?'active':''}">
+                <a href="/goods?ano=${ani.ano}">
+                    <img src="/img/a${ani.ano}.jpg" class="d-block w-100 h-100" alt="...">
+                </a>
+            </div>
+        </c:forEach>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -40,12 +39,6 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-<c:forEach items="${aniList}" var="ani">
-    <div class="ani">
-        <a href="/goods?ano=${ani.ano}">
-            <img src="/img/a${ani.ano}.jpg">
-        </a>
-    </div>
-</c:forEach>
+
 </body>
 </html>
