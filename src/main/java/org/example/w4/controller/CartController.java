@@ -1,4 +1,4 @@
-package org.example.w4;
+package org.example.w4.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

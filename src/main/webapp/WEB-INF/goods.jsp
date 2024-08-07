@@ -21,13 +21,17 @@
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex: 1 0 21%; /* Adjust the width here */
+            width: 500px; /* 고정 너비 설정 */
             box-sizing: border-box;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .goods img {
-            width: 100%; /* Make image responsive */
-            height: auto;
+        .goods-item img {
+            width: 100%; /* 이미지의 가로 길이를 부모 컨테이너의 100%로 설정 */
+            height: 500px; /* 이미지의 높이를 고정 */
+            object-fit: cover; /* 이미지가 컨테이너를 가득 채우도록 설정 */
         }
         .btn-category {
             margin: 5px;

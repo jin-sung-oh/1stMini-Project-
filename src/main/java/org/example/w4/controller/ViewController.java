@@ -1,4 +1,4 @@
-package org.example.w4;
+package org.example.w4.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -18,7 +18,7 @@ public class ViewController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        // POST 요청 처리 (필요한 경우)
     }
 
     @Override
@@ -27,16 +27,16 @@ public class ViewController extends HttpServlet {
 
         Integer mno = StringUtil.getInt(mnoStr, 1);
 
-
         try {
-            log.info("mno :" + mno);
+            log.info("mno: " + mno);
 
             GoodsVO vo = GoodsDAO.INSTANCE.select(mno);
+            log.info("GoodsVO: " + vo); // 추가된 로그
 
-            req.setAttribute("goods",vo);
+            req.setAttribute("goods", vo);
             req.getRequestDispatcher("/WEB-INF/view.jsp").forward(req, resp);
 
-        }catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

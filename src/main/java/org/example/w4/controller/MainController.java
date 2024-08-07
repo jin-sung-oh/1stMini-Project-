@@ -1,4 +1,4 @@
-package org.example.w4;
+package org.example.w4.controller;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -6,17 +6,12 @@ import lombok.extern.log4j.Log4j2;
 import org.example.w4.vo.AniVO;
 
 
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.extern.log4j.Log4j2;
 import org.example.w4.dao.AniDAO;
-import org.example.w4.vo.AniVO;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
     @WebServlet(value = "/main")
