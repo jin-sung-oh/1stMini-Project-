@@ -15,6 +15,11 @@
     .goods th {
         font-size: 20px;
     }
+    .large-button {
+        padding: 10px 20px; /* 버튼 내부의 여백 크기 */
+        font-size: 15px; /* 글자 크기 */
+        background-color: lightcyan;
+    }
 </style>
 <div class="goods">
     <h1>상품 상세 화면</h1>
@@ -36,10 +41,10 @@
 <hr/>
 <form action="/cart" method="post">
     <input type="hidden" name="mno" value="${goods.mno}">
-    <button>담기</button>
+    <button class="large-button">담기</button>
 </form>
 <a href="/goods">
-    <button>돌아가기</button>
+    <button class="large-button">돌아가기</button>
 </a>
 </body>
 </html>

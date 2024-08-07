@@ -25,6 +25,11 @@
         .cart-item span {
             margin-right: 20px; /* 각 항목 사이의 여백 설정 */
         }
+        .large-button {
+            padding: 10px 20px; /* 버튼 내부의 여백 크기 */
+            font-size: 15px; /* 글자 크기 */
+            background-color: lightcyan;
+        }
     </style>
 </head>
 <body>
@@ -45,14 +50,15 @@
             </div>
         </c:forEach>
     </div>
+<hr/>
 
-    <button>order</button>
+    <button class="large-button">주문</button>
 </form>
 
 
 
 <a href="/main">
-    <button>목록</button>
+    <button class="large-button">목록</button>
 </a>
 </body>
 </html>
